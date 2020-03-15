@@ -22,10 +22,8 @@ public class ToggleSetActive : InteractiveObject
     {
         if(isReuseable || !hasBeenUsed)
         {
-            Debug.Log("Toggled");
             base.InteractWith();
             objectToToggle.SetActive(!objectToToggle.activeSelf);
-           // droppedItem.SetActive(true);
             hasBeenUsed = true;
             if (!isReuseable)  displayText = string.Empty;
         }
