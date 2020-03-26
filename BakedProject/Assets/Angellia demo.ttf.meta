@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: c2b8ce6560856f94aa589fb0dc72b566
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Angellia
+  fontNames:
+  - Angellia
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 5e4ab0d0c8c4ae8499d2608f7bec5407, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
