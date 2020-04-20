@@ -4,10 +4,18 @@ using UnityEngine;
 
 public class InventoryObject : InteractiveObject
 {
-    [Tooltip("The name of the object as it appears in the inventory UI")]
+    [Tooltip("The name of the object as it appears in the inventory UI.")]
     [SerializeField]
     private string objectName = nameof(InventoryObject);
 
+    [Tooltip("Text that will display when the player selects this item in the inventory menu.")]
+    [TextArea(3,8)]
+    [SerializeField]
+    private string description;
+
+    [Tooltip("Icon to display for this item in inventory.")]
+    [SerializeField]
+    private Sprite icon;
 
     private new Renderer renderer;
     private new Collider collider;
