@@ -42,9 +42,9 @@ public class InventoryObject : InteractiveObject
     {
         base.InteractWith();
         PlayerInventory.InventoryObjects.Add(this);
-        objectToToggle.SetActive(!objectToToggle.activeSelf);
-
-        //renderer.enabled = false;
-        //collider.enabled = false; 
+        Debug.Log($"Inventory menu game object name {InventoryMenu.Instance.name}");
+        //objectToToggle.SetActive(!objectToToggle.activeSelf);
+        renderer.enabled = false;
+        collider.enabled = false;
     }
 }
