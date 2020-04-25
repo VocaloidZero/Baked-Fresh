@@ -20,15 +20,24 @@ public class InventoryObject : InteractiveObject
     private new Renderer renderer;
     private new Collider collider;
     public string ObjectName => objectName;
+    private Renderer[] childRenderers;
+    private Collider[] childColliders;
+    
+    
 
-    [SerializeField]
-    private GameObject objectToToggle;
+    //[SerializeField]
+    //private GameObject objectToToggle;
 
 
     private void Start()
     {
-        renderer = GetComponent<Renderer>();
-        collider = GetComponent<Collider>();
+       
+            renderer = GetComponent<Renderer>();
+            collider = GetComponent<Collider>();
+       
+            childRenderers = GetComponentsInChildren<Renderer>();
+            childColliders = GetComponentsInChildren<Collider>();
+        
     }
 
     public InventoryObject()
@@ -43,8 +52,26 @@ public class InventoryObject : InteractiveObject
         base.InteractWith();
         PlayerInventory.InventoryObjects.Add(this);
         Debug.Log($"Inventory menu game object name {InventoryMenu.Instance.name}");
-        //objectToToggle.SetActive(!objectToToggle.activeSelf);
+
         renderer.enabled = false;
+        DisableChildRenderers();
         collider.enabled = false;
+        DisableChildColliders();
+    }
+
+    void DisableChildRenderers()
+    {
+        foreach(Renderer col in childRenderers)
+        {
+            col.enabled = false;
+        }
+    }
+
+    void DisableChildColliders()
+    {
+        foreach (Collider col in childColliders)
+        {
+            col.enabled = false;
+        }
     }
 }
