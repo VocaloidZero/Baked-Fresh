@@ -5,10 +5,11 @@ using UnityEngine;
 [RequireComponent(typeof(AudioSource))]
 public class InteractiveObject : MonoBehaviour, IInteractive
 {
+    [Tooltip("The name of the object in the UI when the player looks at an object in the world.")]
     [SerializeField]
     protected string displayText = nameof(InteractiveObject);
-    public string DisplayText => displayText;
-    private AudioSource audioSource;
+    public virtual string DisplayText => displayText;
+    protected AudioSource audioSource;
 
     protected virtual void Awake()
     {
