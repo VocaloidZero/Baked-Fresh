@@ -7,7 +7,10 @@ public class ToggleSetActive : InteractiveObject
     [Tooltip("The game object to toggle.")]
     [SerializeField]
     private GameObject objectToToggle;
-    private GameObject droppedItem;
+
+    [Tooltip("The game object to toggle.")]
+    [SerializeField]
+    private GameObject foodToToggleOn;
 
     [Tooltip("Can the player interact with this more than once?")]
     [SerializeField]
@@ -24,6 +27,7 @@ public class ToggleSetActive : InteractiveObject
         {
             base.InteractWith();
             objectToToggle.SetActive(!objectToToggle.activeSelf);
+            foodToToggleOn.SetActive(!foodToToggleOn.activeSelf);
             hasBeenUsed = true;
             if (!isReuseable)  displayText = string.Empty;
         }
