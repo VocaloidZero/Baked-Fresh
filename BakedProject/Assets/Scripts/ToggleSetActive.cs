@@ -17,6 +17,13 @@ public class ToggleSetActive : InteractiveObject
     private bool isReuseable = true;
 
     private bool hasBeenUsed = false;
+    public AudioClip foodDisappearAudio;
+     AudioSource audio;
+
+    private void Start()
+    {
+        audio = GetComponent<AudioSource>();
+    }
 
     /// <summary>
     /// Toggles the activeSelf value for the objectToToggle when the player interacts with this item.
@@ -30,6 +37,7 @@ public class ToggleSetActive : InteractiveObject
             foodToToggleOn.SetActive(!foodToToggleOn.activeSelf);
             hasBeenUsed = true;
             if (!isReuseable)  displayText = string.Empty;
+            audio.PlayOneShot(foodDisappearAudio);
         }
         
     }
