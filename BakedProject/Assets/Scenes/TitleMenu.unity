@@ -764,7 +764,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 816b2a4e7616b4a48ba8c0de80d67dab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameSceneName: Main
+  gameSceneName: IntroScene
 --- !u!95 &271777251
 Animator:
   serializedVersion: 3
