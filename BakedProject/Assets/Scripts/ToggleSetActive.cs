@@ -16,9 +16,11 @@ public class ToggleSetActive : InteractiveObject
     [SerializeField]
     private bool isReuseable = true;
 
+    public ParticleSystem smokePuff;
     private bool hasBeenUsed = false;
     public AudioClip foodDisappearAudio;
      AudioSource audio;
+
 
     private void Start()
     {
@@ -38,6 +40,7 @@ public class ToggleSetActive : InteractiveObject
             hasBeenUsed = true;
             if (!isReuseable)  displayText = string.Empty;
             audio.PlayOneShot(foodDisappearAudio);
+            smokePuff.Play();
         }
         
     }
