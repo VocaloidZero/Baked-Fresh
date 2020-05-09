@@ -1,12 +1,16 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ChangeScene : MonoBehaviour
 {
+    [SerializeField]
+    private string finalSceneName;
 
-    public void LoadNewScene()
+
+    void OnTriggerEnter(Collider other)
     {
-        UnityEngine.SceneManagement.SceneManager.LoadScene("Main");
+        SceneManager.LoadScene(finalSceneName);
     }
 }
