@@ -6,6 +6,12 @@ public class TitleMenu : MonoBehaviour
     [SerializeField]
     private string gameSceneName;
 
+    void Start()
+    {
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+    }
+
     public void LoadGameScene()
     {
         SceneManager.LoadScene(gameSceneName);

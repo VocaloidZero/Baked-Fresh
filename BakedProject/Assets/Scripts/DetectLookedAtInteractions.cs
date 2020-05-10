@@ -21,6 +21,11 @@ public class DetectLookedAtInteractions : MonoBehaviour
     /// </summary>
     public static event Action<IInteractive> LookedAtInteractiveChanged;
 
+    private void Update()
+    {
+        Physics.IgnoreLayerCollision(8, 9);
+    }
+
 
     public IInteractive LookedAtInteractive
     {   get { return lookedAtInteractive; }
