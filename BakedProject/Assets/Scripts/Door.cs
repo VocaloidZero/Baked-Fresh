@@ -36,7 +36,10 @@ public class Door : InteractiveObject
     [SerializeField]
     private AudioClip openedAudioClip;
 
-    private bool HasKey => PlayerInventory.InventoryObjects.Contains(key);
+    [SerializeField]
+    private InventoryObject keyTwo;
+
+    private bool HasKey => PlayerInventory.InventoryObjects.Contains(key) && PlayerInventory.InventoryObjects.Contains(keyTwo);
     private Animator animator;
     private bool isLocked;
     private bool isOpen = false;
