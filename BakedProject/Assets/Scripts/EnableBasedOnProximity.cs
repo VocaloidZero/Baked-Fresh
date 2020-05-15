@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class EnableBasedOnProximity : MonoBehaviour
 {
-    public GameObject loading;
+    [SerializeField]
+    private GameObject loading;
 
     private void OnTriggerEnter(Collider other)
     {
