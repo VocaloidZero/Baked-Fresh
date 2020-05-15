@@ -13,6 +13,7 @@ public class Door : InteractiveObject
     [SerializeField]
     private string lockedDisplayText = "Locked.";
 
+
     //public override string DisplayText => isLocked ? lockedDisplayText : base.DisplayText;
     public override string DisplayText
     {
